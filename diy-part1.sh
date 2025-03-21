@@ -27,5 +27,6 @@ echo 'src-git openclash https://github.com/vernesong/OpenClash.git' >>feeds.conf
 
 # 更新golang
 pushd feeds/packages/lang
-rm -rf golang && svn co https://github.com/openwrt/packages/tree/openwrt-23.05/lang/golang
+rm -rf golang
+git clone https://github.com/openwrt/packages/tree/openwrt-23.05/lang/golang feeds/packages/lang/golang
 popd
